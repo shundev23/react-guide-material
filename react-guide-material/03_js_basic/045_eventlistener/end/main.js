@@ -10,3 +10,14 @@ const helloFn = (e) => {
   console.log('hello')
 };
 btnEl.addEventListener('click', helloFn)
+
+// e: イベントオブジェクト
+const alertMessage = '押すな！と言ったのに、押したね。';
+const btnAlert = document.getElementsByClassName('donot_click');
+const alertFn = (e) => {
+  // イベント元のtextContentが出力
+  console.dir(e.target.textContent)
+  console.log(alertMessage)
+};
+// addEventListener: 第一引数：イベント定義、第二引数：関数
+btnAlert[0].addEventListener('click', alertFn);
