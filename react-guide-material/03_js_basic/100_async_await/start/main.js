@@ -7,7 +7,7 @@ async function init(){
     try{
         const result = await new Promise((resolve, reject) => {
             setTimeout(() => {
-                const value = Math.random();
+                const value = Math.random(0,90);
                 document.getElementsByClassName("random-num")[0].textContent = value;
                 if  (value / 2 == 0){
                     console.log(`${value}は偶数です`);
